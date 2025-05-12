@@ -1,3 +1,4 @@
+
 # Lightning Messaging Utility
 
 **Lightning Messaging Utility** is a Salesforce Labs component designed to help Admins and Developers display contextual, reusable, and configurable toast messages across Lightning Experience and Lightning Web Components (LWC).
@@ -31,42 +32,40 @@ This lightweight utility provides real-time user feedback through success messag
 1. **Clone this repository**  
    ```bash
    git clone https://github.com/SalesforceLabs/LightningMessagingUtility.git
+   ```
 
+2. **Deploy to your org** using Salesforce CLI  
+   ```bash
+   sfdx force:source:deploy -p force-app
+   ```
 
-⸻
+3. **Assign permissions**  
+   If a permission set is included, assign it to users who will invoke messaging features.
 
-Installation
-	1.	Clone this repository:
+---
 
-git clone https://github.com/SalesforceLabs/LightningMessagingUtility.git
+## Usage
 
+### From Flow
 
-	2.	Deploy to your org using Salesforce CLI:
+Use the **Show Toast Message** invocable Apex action in Flow Builder.
 
-sfdx force:source:deploy -p force-app
+**Inputs:**
+- `Title`: Text displayed in bold at the top of the message
+- `Message`: Main body text of the toast
+- `Type`: One of `success`, `error`, `info`, or `warning`
 
+### From Apex
 
-	3.	Assign permissions if required via permission set included in the package.
-
-⸻
-
-Usage
-
-From Flow
-
-Use the Show Toast Message invocable Apex action. Provide the following inputs:
-	•	Title – The title of your message
-	•	Message – The body of the toast
-	•	Type – Success, Error, Info, or Warning
-
-From Apex
-
+```apex
 LightningToast.show('Success!', 'Record updated successfully.', 'success');
+```
 
-From LWC
+### From LWC
 
-You can import and dispatch a standard toast event:
+Use the standard `ShowToastEvent`:
 
+```js
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 this.dispatchEvent(
@@ -76,20 +75,22 @@ this.dispatchEvent(
     variant: 'success'
   })
 );
+```
 
+---
 
-⸻
+## Contributing
 
-Contributing
+We welcome pull requests and community contributions! Fork the repo, make your updates, and submit a PR. For significant changes, please open an issue first to discuss your proposed changes.
 
-We welcome pull requests and suggestions! This is a Salesforce Labs community-supported project. Feel free to fork, modify, and share your improvements.
+---
 
-⸻
+## License
 
-License
+This project is licensed under the [BSD 3-Clause License](LICENSE).
 
-BSD 3-Clause License
+---
 
-⸻
+## Maintainers
 
-Would you like me to generate a sample Flow using the component or a video walkthrough script to accompany this README?
+This component is maintained by Salesforce Labs. Community support is provided on a best-effort basis.
