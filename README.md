@@ -1,28 +1,37 @@
+# Lightning Messaging Utility
 
+**Lightning Messaging Utility** is a Salesforce Labs component designed to help Admins and Developers display contextual, reusable, and configurable toast messages across Lightning Experience and Lightning Web Components (LWC).
 
-Lightning Messaging Utility
+This lightweight utility provides real-time user feedback through success messages, error alerts, warnings, and informational messages—ideal for enhancing user experience during Flows or custom development.
 
-Lightning Messaging Utility is a Salesforce Labs component designed to make it easier for Admins and Developers to display contextual, reusable, and configurable toast messages across Lightning Experience and Lightning Web Components (LWC).
+---
 
-This lightweight utility helps you guide users through key interactions by providing real-time feedback, error alerts, success confirmations, and informative messages in a declarative or programmatic way.
+## Features
 
-⸻
+- Display toast messages from Flows or Apex
+- Configurable toast type: `Success`, `Error`, `Info`, or `Warning`
+- Works seamlessly in Lightning Experience and LWC
+- Simple installation and setup
+- Supports reusable message templates
+- Fully open source and customizable
 
-Features
-	•	Display toast messages from Flows or Apex
-	•	Configurable toast type: Success, Error, Info, Warning
-	•	Works seamlessly in Lightning Experience and LWC
-	•	Simple installation and setup
-	•	Supports reusable message templates
-	•	Fully open source and customizable
+---
 
-⸻
+## Use Cases
 
-Use Cases
-	•	Notify users after Flow actions complete
-	•	Display confirmation or validation messages from custom Apex
-	•	Provide inline feedback during guided processes
-	•	Alert users to important changes or system updates
+- Notify users after Flow actions complete
+- Display validation results or process outcomes
+- Provide inline messaging during guided experiences
+- Alert users to important business logic exceptions
+
+---
+
+## Installation
+
+1. **Clone this repository**  
+   ```bash
+   git clone https://github.com/SalesforceLabs/LightningMessagingUtility.git
+
 
 ⸻
 
